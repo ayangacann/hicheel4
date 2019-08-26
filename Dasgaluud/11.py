@@ -4,9 +4,9 @@ n = int(input())
 a = n % 10
 b = n // 10 % 10
 c = n // 100 % 10
-if a > b or a > c or b > c:
-    print(c)
-elif b > a or c > a or b > a:
+if a < b and a < c:
     print(a)
-else: 
+elif b < a and b < c:
     print(b)
+elif c < a and c < b:
+    print(c)
